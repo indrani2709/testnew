@@ -8,7 +8,6 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.en.Given;
@@ -26,8 +25,8 @@ public class Stepdefs {
 	static int numberOfProducts; 
 	@Given("Alex is on the login page")
 	public void alex_is_on_the_login_page() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\training_d2.03.07\\Desktop\\Drivers\\chromedriver.exe");
-		driver = new chromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\drivers\chromedriver_win32\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
